@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "5fc3cd9b-fcd8-4743-821c-e1d0260502d2",
+		"name": "Enigma Future",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23043473"
+	},
+	"item": [
+		{
+			"name": "Task 1",
+			"item": [
+				{
+					"name": "GET SERVICE VECHILE RECORD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urls}}/service_record/",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"service_record",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST SERVICE VECHILE RECORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner_name\": \"Ujjwal Sharma\",\r\n  \"vehicle_model\": \"Honda City\",\r\n  \"service_date\": \"2024-12-01\",\r\n  \"description\": \"Engine oil change and general servicing\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urls}}/service_record/",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"service_record",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task 3",
+			"item": [
+				{
+					"name": "Inventory Item",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urls}}/inventory_item/",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"inventory_item",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Wireless Mouse\",\r\n    \"description\": \"A high-precision wireless mouse with ergonomic design.\",\r\n    \"quantity\": 50,\r\n    \"price\": 19.99\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urls}}/inventory_item/",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"inventory_item",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Wireless keyboard\",\r\n    \"description\": \"A high-precision wireless mouse with ergonomic design.\",\r\n    \"quantity\": 50,\r\n    \"price\": 19.99\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urls}}/inventory_item/?id=1",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"inventory_item",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{urls}}/inventory_item/?id=1",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"inventory_item",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Service Booking",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urls}}/service_booking",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"service_booking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_name\": \"John Doe\",\r\n    \"vehicle_details\": \"Honda Civic 2020 - White\",\r\n    \"service_date\": \"2024-12-28T10:00:00Z\",\r\n    \"service_items\": [\r\n        {\"id\": 1, \"quantity\": 1}\r\n    ],\r\n    \"total_cost\": 150.75\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urls}}/service_booking/",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"service_booking",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_name\": \"John Doe\",\r\n    \"vehicle_details\": \"Honda Civic 2020 - White\",\r\n    \"service_date\": \"2024-12-28T10:00:00Z\",\r\n    \"service_items\": [\r\n        {\"id\": 1, \"quantity\": 3}\r\n    ],\r\n    \"total_cost\": 150.75\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urls}}/service_booking/?id=10",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"service_booking",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{urls}}/service_booking/?id=10",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"service_booking",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Service Booking Item",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urls}}/service_booking_item/",
+									"host": [
+										"{{urls}}"
+									],
+									"path": [
+										"service_booking_item",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urls",
+			"value": "127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
