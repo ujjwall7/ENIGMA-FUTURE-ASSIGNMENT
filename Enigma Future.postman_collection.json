@@ -7,6 +7,69 @@
 	},
 	"item": [
 		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ujjwal",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urls}}/login/",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
 			"name": "Task 1",
 			"item": [
 				{
@@ -65,8 +128,17 @@
 						{
 							"name": "Get",
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM1Mjg4NzI1LCJpYXQiOjE3MzUyODg0MjUsImp0aSI6ImQwMmY5MDQ4ODQxMzRhODk4OGNiZmRiMGVjNTU3MWNjIiwidXNlcl9pZCI6MX0.Z8CN2QMggJunRccbshZZAi_2E-dRgYyP2fduw160i1I",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{urls}}/inventory_item/",
 									"host": [
@@ -295,9 +367,51 @@
 						}
 					]
 				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM1Mjg4NzI1LCJpYXQiOjE3MzUyODg0MjUsImp0aSI6ImQwMmY5MDQ4ODQxMzRhODk4OGNiZmRiMGVjNTU3MWNjIiwidXNlcl9pZCI6MX0.Z8CN2QMggJunRccbshZZAi_2E-dRgYyP2fduw160i1I",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM1Mjg1MDM4LCJpYXQiOjE3MzUyODQ3MzgsImp0aSI6IjQ2ZTZiM2ViMzc2MzQ4NDliZGMwNTQ0NDEzMzM2YWRiIiwidXNlcl9pZCI6MX0.d8TISuVspuqD5pc7ipurUbFFXI36Q88L54o_bvlC5Gg",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
